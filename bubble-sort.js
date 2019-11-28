@@ -15,7 +15,7 @@ function bubbleSort(arr) {
 /**
  * TO-DO LIST
  * Make it according to Adiel's advises!
- */
+*/
 
 
 let example1 = bubbleSort(['how', 'do', 'you', 'define', 'an', 'array', '?']);
