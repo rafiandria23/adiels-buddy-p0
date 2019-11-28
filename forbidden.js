@@ -9,41 +9,40 @@ function main (alphabets, forbidden) {
   //your code here
   let result = [];
   let alphabetsStack = [];
-  let forbiddenStack = [];
-
-  for (let a = 0; a < forbidden.length; a++) {
-    forbiddenStack.push(forbidden[a]);
-  }
 
   for (let i = 0; i < alphabets.length; i++) {
     let check = 0;
+
     for (let j = 0; j < alphabetsStack.length; j++) {
       if (alphabets[i] === alphabetsStack[j]) {
       check++;
       }
     }
+
+    for (let z = 0; z < forbidden.length; z++) {
+      if (alphabets[i] === forbidden[z]) {
+        check++;
+      }
+    }
+
     if (check === 0) {
       alphabetsStack.push(alphabets[i]);
     }
   }
 
-  for (var z = 0; z < forbiddenStack.length; z++) {
-  }
-
   for (let k = 0; k < alphabetsStack.length; k++) {
     let eachResult = [];
+
     for (let l = 0; l < alphabets.length; l++) {
-      if (alphabets[l] === alphabetsStack[k] && alphabets[l] !== forbiddenStack[0]) {
-        eachResult.push(alphabets[z]);
-      } else {
-        continue;
+      if (alphabets[l] === alphabetsStack[k]) {
+        eachResult.push(alphabets[l]);
       }
     }
+
     result.push([eachResult[0], eachResult.length]);
   }
 
   return result;
-
 }
 
 console.log(main("asdkjwlkhduefakueawdggbmopp", "gw"))
