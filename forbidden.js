@@ -45,6 +45,26 @@ function main (alphabets, forbidden) {
   return result;
 }
 
+// Additional way from Adiel
+
+// function main (alphabets, forbidden) {
+//   var alphabetsStack = []
+//   for (let i = 0; i < alphabets.length; i++) {
+//     let check = -1;
+//     for (let j = 0; j < alphabetsStack.length; j++) {
+//       if (alphabets[i] === alphabetsStack[j][0]) {
+//         check = j;
+//       }
+//     }
+//     if (check == -1) {
+//       alphabetsStack.push([alphabets[i], 1])
+//     } else {
+//       alphabetsStack[check][1]++
+//     }
+//   }
+//   return alphabetsStack
+// }
+
 console.log(main("asdkjwlkhduefakueawdggbmopp", "gw"))
 // [ [ 'a', 3 ],
 //   [ 's', 1 ],
