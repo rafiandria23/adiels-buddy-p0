@@ -29,6 +29,9 @@ function main (board) {
   result.push(tempLeft);
   result.push(tempRight);
 
+  // Additional way from Adiel
+  // return [tempLeft, tempRight];
+
   return result;
 }
 
